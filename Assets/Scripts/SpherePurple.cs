@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SphereRed : MonoBehaviour
+public class SpherePurple : MonoBehaviour
 {
-    public GameObject RedText;
-    private int redCounter;
+    public GameObject PurpleText;
+    private int purpleCounter;
 
     private AudioSource audioSource;
 
@@ -26,9 +26,9 @@ public class SphereRed : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            redCounter++;
+            purpleCounter++;
 
-            RedText.GetComponent<Text>().text = "Red: " + redCounter;
+            PurpleText.GetComponent<Text>().text = "Purple: " + purpleCounter;
 
             audioSource.Play();
         }
